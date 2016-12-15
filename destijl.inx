@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>DeStijl</_name>
+  <id>org.leminaw.filter.destijl</id>
+	<dependency type="executable" location="extensions">destijl.py</dependency>
+	<dependency type="executable" location="extensions">inkex.py</dependency>
+  <param name="iterations"   type="int"   min="0"   max="1000"   _gui-text="Itérations:">20</param>
+  <param name="width"        type="float" min="0.0" max="1000.0" _gui-text="Largeur:">300.0</param>
+  <param name="height"       type="float" min="0.0" max="1000.0" _gui-text="Hauteur:">300.0</param>
+  <param name="stroke-width" type="float" min="0.0" max="100.0"  _gui-text="Épaisseur:">8.0</param>
+  <effect>
+  	<object-type>all</object-type>
+      <effects-menu>
+        <submenu _name="Render"/>
+      </effects-menu>
+  </effect>
+  <script>
+    <command reldir="extensions" interpreter="python">destijl.py</command>
+  </script>
+</inkscape-extension>
